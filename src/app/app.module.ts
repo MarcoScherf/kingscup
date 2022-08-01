@@ -23,6 +23,7 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import {AngularFireModule} from '@angular/fire/compat/';
 import { CreateGameComponent } from './create-game/create-game.component';
+import { JoinGameComponent } from './join-game/join-game.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CreateGameComponent } from './create-game/create-game.component';
     DialogAddPlayerComponent,
     GameInfoComponent,
     CreateGameComponent,
+    JoinGameComponent,
   ],
   imports: [
     MatButtonModule,
