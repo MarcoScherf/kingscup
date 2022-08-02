@@ -25,6 +25,7 @@ import {AngularFireModule} from '@angular/fire/compat/';
 import { CreateGameComponent } from './create-game/create-game.component';
 import { JoinGameComponent } from './join-game/join-game.component';
 import { AddPlayerPleaseComponent } from './add-player-please/add-player-please.component';
+import { GameOverComponent } from './game-over/game-over.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AddPlayerPleaseComponent } from './add-player-please/add-player-please.
     CreateGameComponent,
     JoinGameComponent,
     AddPlayerPleaseComponent,
+    GameOverComponent,
   ],
   imports: [
     MatButtonModule,
