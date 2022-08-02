@@ -32,13 +32,8 @@
             cursor: pointer;
         }
     }
-}
-
-@media (max-width: 800px) {
-    .create-game {
-        align-items: unset;
-    }
-    .game-info {
+    @media (max-width: 800px) {
         padding-top: 50px;
+        ;
     }
 }

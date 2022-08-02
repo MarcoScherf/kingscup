@@ -1,0 +1,34 @@
+.join-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    background-image: url(/assets/img/start_bg.png);
+    background-size: cover;
+}
+
+.enter-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+        width: 230px;
+        height: 20px;
+        padding: 10px;
+        font-size: 32px;
+        border-radius: 7px;
+        text-align: center;
+        outline: none;
+        margin-bottom: 10px;
+    }
+    img {
+        width: 250px;
+        height: auto;
+        &:hover {
+            filter: brightness(1.2);
+            cursor: pointer;
+        }
+    }
+}

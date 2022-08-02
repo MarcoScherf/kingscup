@@ -24,6 +24,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import {AngularFireModule} from '@angular/fire/compat/';
 import { CreateGameComponent } from './create-game/create-game.component';
 import { JoinGameComponent } from './join-game/join-game.component';
+import { AddPlayerPleaseComponent } from './add-player-please/add-player-please.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { JoinGameComponent } from './join-game/join-game.component';
     GameInfoComponent,
     CreateGameComponent,
     JoinGameComponent,
+    AddPlayerPleaseComponent,
   ],
   imports: [
     MatButtonModule,

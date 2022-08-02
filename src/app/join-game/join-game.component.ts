@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-join-game',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./join-game.component.scss']
 })
 export class JoinGameComponent implements OnInit {
-
-  constructor() { }
+  gameID: string = '';
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+   
+    
   }
-
+  enterGame() {
+    this.router.navigateByUrl('/game/' + this.gameID)
+  }
 }
