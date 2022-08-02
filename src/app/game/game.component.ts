@@ -5,6 +5,7 @@ import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AddPlayerPleaseComponent } from '../add-player-please/add-player-please.component';
+import { GameOverComponent } from '../game-over/game-over.component';
 
 @Component({
   selector: 'app-game',
@@ -26,7 +27,6 @@ export class GameComponent implements OnInit {
         .doc(this.gameId)
         .valueChanges()
         .subscribe((game: any) => {
-          console.log(game);
           this.game.currentPlayer = game.currentPlayer;
           this.game.playedCards = game.playedCards;
           this.game.players = game.players;
@@ -42,9 +42,7 @@ export class GameComponent implements OnInit {
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
-
     dialogRef.afterClosed().subscribe((name: string) => {
-      console.log('The dialog was closed', name);
       if (name && name.length > 0) {
         this.game.players.push(name);
         this.saveGame();
@@ -54,7 +52,7 @@ export class GameComponent implements OnInit {
 
   takeCard() {
     if (this.game.stack.length == 0) {
-      alert('leer');
+      this.dialog.open(GameOverComponent);
     } else {
       if (!this.game.pickCardAnimation && this.game.players.length > 1) {
         this.game.currentCard = this.game.stack.pop();
@@ -62,16 +60,12 @@ export class GameComponent implements OnInit {
         this.game.currentPlayer++;
         this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
         this.saveGame();
-        console.log('länge:' + this.game.players.length)
-        console.log(this.game.result)
         setTimeout(() => {
           this.game.playedCards.push(this.game.currentCard);
           this.game.pickCardAnimation = false;
           this.saveGame();
         }, 1000);
       } else if (this.game.players.length <= 1) {
-        // alert('Add player');
-        // console.log('get nicht länge' + this.game.players.length)
         this.openaddPlayerPlease()
       }
     }

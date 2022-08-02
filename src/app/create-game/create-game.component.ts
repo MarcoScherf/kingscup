@@ -19,13 +19,10 @@ export class CreateGameComponent implements OnInit {
   ngOnInit(): void {
     this.game = new Game();
     this.gameID();
-    console.log('game-result: ' + this.game.result)
-    console.log('create',this.game);
   }
 userID;
   gameID() {
     this.route.params.subscribe((params) => {
-      console.log('ID: ', params['id']);
       this.game.result = params['id'];
 
     })
