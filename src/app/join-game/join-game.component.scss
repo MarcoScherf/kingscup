@@ -9,6 +9,13 @@
     background-size: cover;
 }
 
+.padding-right {
+    padding-right: 50px;
+    @media (max-width: 800px) {
+        padding-right: 0;
+    }
+}
+
 .enter-game {
     display: flex;
     flex-direction: column;
@@ -30,5 +37,13 @@
             filter: brightness(1.2);
             cursor: pointer;
         }
+    }
+}
+
+.button {
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 }

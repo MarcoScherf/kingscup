@@ -1,20 +1,4 @@
 {
-  "targets": {
-    "ring-of-fire-cce03": {
-      "hosting": {
-        "ringoffire": [
-          "ring-of-fire-cce03"
-        ]
-      }
-    },
-    "ring-of-fire-f0a9d": {
-      "hosting": {
-        "ringoffire": [
-          "ring-of-fire-f0a9d"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "ring-of-fire-f0a9d"
   }

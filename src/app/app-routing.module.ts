@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'create-game/:id', component: CreateGameComponent },
   { path: 'join-game', component: JoinGameComponent },
   { path: 'game/:id', component: GameComponent },
+  { path: '**', component: StartScreenComponent },
 ];
 
 @NgModule({

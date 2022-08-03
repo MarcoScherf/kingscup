@@ -26,6 +26,8 @@ import { CreateGameComponent } from './create-game/create-game.component';
 import { JoinGameComponent } from './join-game/join-game.component';
 import { AddPlayerPleaseComponent } from './add-player-please/add-player-please.component';
 import { GameOverComponent } from './game-over/game-over.component';
+import { JoinIsEmptyComponent } from './join-is-empty/join-is-empty.component';
+import { GameNotExistComponent } from './game-not-exist/game-not-exist.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { GameOverComponent } from './game-over/game-over.component';
     JoinGameComponent,
     AddPlayerPleaseComponent,
     GameOverComponent,
+    JoinIsEmptyComponent,
+    GameNotExistComponent,
   ],
   imports: [
     MatButtonModule,

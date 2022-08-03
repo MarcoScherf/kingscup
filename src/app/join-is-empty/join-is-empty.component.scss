@@ -1,0 +1,9 @@
+.join-empty {
+    img {
+        width: 250px;
+        &:hover {
+            filter: brightness(1.2);
+            cursor: pointer;
+        }
+    }
+}
