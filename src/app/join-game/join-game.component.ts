@@ -27,7 +27,7 @@ export class JoinGameComponent implements OnInit {
       .doc(this.gameID).ref.get().then(function (doc) {
         if (doc.exists) {     
           this.router.navigateByUrl('/game/' + this.gameID);
-        } else{
+        } else if(!doc.exists)  {
           this.dialog.open(GameNotExistComponent);
         }
       })
