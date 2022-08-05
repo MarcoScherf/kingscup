@@ -24,7 +24,7 @@ export class JoinGameComponent implements OnInit {
     } else if (this.gameID.length > 0) {
       this.firestore
       .collection('games')
-      .doc(this.gameID).ref.get().then(function (doc) {
+      .doc(this.gameID).ref.get().then((doc) => {
         if (doc.exists) {     
           this.router.navigateByUrl('/game/' + this.gameID);
         } else if(!doc.exists)  {
